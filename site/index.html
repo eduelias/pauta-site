@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <!-- Old app links (https://pauta.cc/#/mudar/<token>, #/entrar/<token>) reach this site
+       through the apex and www redirects with their #fragment intact: send them on to the
+       app before anything renders. Every page starts with this line. -->
+  <script>if (location.hash.startsWith("#/")) { document.documentElement.style.display = "none"; location.replace("https://app.pauta.cc/" + location.hash); }</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0e12" media="(prefers-color-scheme: dark)">
+  <title>Pauta · a fila de pedidos do seu time de marketing</title>
+  <meta name="description" content="Pauta organiza os pedidos de cada cliente entre quem atende e quem executa: briefing, prazo, quadro, ficha do cliente, financeiro e arquivos no OneDrive. Entrada com Face ID, sem senha.">
+  <link rel="canonical" href="https://www.pauta.cc/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pauta">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.pauta.cc/">
+  <meta property="og:title" content="Pauta · a fila de pedidos do seu time de marketing">
+  <meta property="og:description" content="Pedidos por cliente, quadro, financeiro e arquivos num lugar só. Para times pequenos de marketing e agências. Beta aberto a convite.">
+  <meta property="og:image" content="https://www.pauta.cc/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pauta: a fila de pedidos do seu time de marketing, com um quadro de pedidos por cliente">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.pauta.cc/og.png">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></symbol>
+  <symbol id="i-client" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.4 1.7-2 3-2s2.4.6 3 2M15 10h3M15 14h3"/></symbol>
+  <symbol id="i-money" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-face" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 9v1M15 9v1M12 9v4h-1M9 16c1.7 1.3 4.3 1.3 6 0"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-5A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a href="/" class="brand"><span class="logo" aria-hidden="true"></span>pauta</a>
+    <nav aria-label="Principal">
+      <a href="#recursos">Recursos</a>
+      <a href="#planos">Planos</a>
+      <a href="#beta">Beta</a>
+      <a class="btn small" href="https://app.pauta.cc">Entrar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Beta fechado · para times de marketing e agências</span>
+        <h1>Os pedidos do time, <span class="g">num lugar só.</span></h1>
+        <p class="lead">O Pauta é a fila de pedidos entre quem fala com o cliente e quem roda a
+          campanha. Cada pedido com briefing, prazo e histórico, organizado por cliente. Sem
+          planilha, sem caçar mensagem perdida no WhatsApp.</p>
+        <div class="ctas">
+          <a class="btn primary big" href="#beta">Quero entrar no beta</a>
+          <a class="btn big" href="#planos">Ver os planos</a>
+        </div>
+        <p class="note">Já usa o Pauta? <a href="https://app.pauta.cc">Entrar em app.pauta.cc →</a></p>
+      </div>
+
+      <div class="board" role="img" aria-label="Um quadro de pedidos com as colunas A fazer, Em andamento e Aguardando">
+        <div class="col">
+          <h4>A fazer <b>3</b></h4>
+          <div class="card">
+            <div class="who"><span class="av" style="background:#8a5a1e">PT</span>Padaria Trigo de Ouro</div>
+            <div class="what">Novos criativos do panetone</div>
+            <div class="meta"><span class="pill p-todo">A fazer</span><span class="due-hot">Hoje</span></div>
+          </div>
+          <div class="card">
+            <div class="who"><span class="av" style="background:#2563eb">OS</span>Odonto Sorriso</div>
+            <div class="what">Post de Black Friday</div>
+            <div class="meta"><span class="pill p-todo">A fazer</span><span>sex, 7</span></div>
+          </div>
+          <div class="card">
+            <div class="who"><span class="av" style="background:#475569">AS</span>Auto Center Silva</div>
+            <div class="what">Ajustar público do anúncio</div>
+            <div class="meta"><span class="pill p-todo">A fazer</span><span>12 nov</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Em andamento <b>2</b></h4>
+          <div class="card tilt">
+            <div class="who"><span class="av" style="background:#5b45ff">CB</span>Clínica Bem Estar</div>
+            <div class="what">Campanha de limpeza de pele</div>
+            <div class="meta"><span class="pill p-doing">Em andamento</span><span class="due-hot">Amanhã</span></div>
+          </div>
+          <div class="card">
+            <div class="who"><span class="av" style="background:#be185d">PA</span>Pet Shop Amigo Fiel</div>
+            <div class="what">Vídeo curto para os Reels</div>
+            <div class="meta"><span class="pill p-doing">Em andamento</span><span>8 nov</span></div>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Aguardando <b>1</b></h4>
+          <div class="card">
+            <div class="who"><span class="av" style="background:#15803d">SL</span>Studio Lume Pilates</div>
+            <div class="what">Aprovar arte da aula experimental</div>
+            <div class="meta"><span class="pill p-waiting">Aguardando</span><span>cliente</span></div>
+          </div>
+          <h4 class="more" style="margin-top:16px">Concluído <b>14</b></h4>
+          <div class="card">
+            <div class="who"><span class="av" style="background:#7c3aed">CG</span>Café Grão Mineiro</div>
+            <div class="what">Relatório de outubro</div>
+            <div class="meta"><span class="pill p-done">Concluído</span><span>ontem</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="como-funciona">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="k">Como funciona</div>
+        <h2>Quem atende pede. Quem executa entrega. Todo mundo vê.</h2>
+        <p>Feito com um time de marketing de verdade, que trocou a planilha "Controle de
+          Clientes e Campanhas" pelo Pauta e usa todo dia.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>Abra o pedido</h3>
+          <p>Quem fala com o cliente registra o pedido com o briefing, a verba, o prazo e a
+            prioridade. Leva menos de um minuto, do celular.</p>
+        </div>
+        <div class="step">
+          <h3>Acompanhe no quadro</h3>
+          <p>Quem roda os anúncios assume e move o pedido de etapa. O painel mostra o que vence
+            hoje e o que está parado esperando o cliente.</p>
+        </div>
+        <div class="step">
+          <h3>Tudo fica registrado</h3>
+          <p>Comentários, arquivos e cada mudança caem na linha do tempo do pedido. Ninguém
+            precisa perguntar "e aquele post, saiu?".</p>
+        </div>
+      </div>
+      <div class="flow" aria-label="As etapas de um pedido">
+        <span class="pill p-todo">A fazer</span> → <span class="pill p-doing">Em andamento</span>
+        → <span class="pill p-waiting">Aguardando</span> → <span class="pill p-done">Concluído</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="recursos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="k">Recursos</div>
+        <h2>O que um time pequeno de marketing precisa. E só isso.</h2>
+      </div>
+      <div class="features">
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-list"/></svg></div>
+          <h3>Pedidos por cliente</h3>
+          <p>Briefing, verba, prazo, responsável e prioridade. Filtros e listas salvas para
+            achar tudo rápido.</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-board"/></svg></div>
+          <h3>Quadro e painel</h3>
+          <p>Veja cada etapa de relance, e no painel o que vence hoje, o que está atrasado e o
+            que espera retorno.</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-client"/></svg></div>
+          <h3>Ficha do cliente</h3>
+          <p>Contato, segmento, Instagram, conta de anúncios e o histórico de todos os pedidos
+            daquele cliente.</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-money"/></svg></div>
+          <h3>Financeiro</h3>
+          <p>Valor mensal de cada cliente, quem está em dia, em atraso ou vencendo na semana, e
+            quanto entrou no mês.</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-folder"/></svg></div>
+          <h3>Arquivos no seu OneDrive</h3>
+          <p>Imagens e vídeos ficam no OneDrive do time, presos ao pedido. Para o cliente, um
+            link só de visualização.</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-face"/></svg></div>
+          <h3>Entrar com Face ID</h3>
+          <p>Sem senha: entra com Face ID, digital ou o PIN do aparelho (passkey). Nada para
+            esquecer ou vazar.</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-chat"/></svg></div>
+          <h3>Feito para o WhatsApp</h3>
+          <p>Mande o link de um pedido no grupo: aparece a prévia e abre direto no pedido
+            certo.</p>
+        </div>
+        <div class="feat">
+          <div class="ic"><svg class="i"><use href="#i-clock"/></svg></div>
+          <h3>Linha do tempo</h3>
+          <p>Cada pedido guarda quem mudou o quê e quando, com comentários. Histórico que não
+            se perde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="trust">
+        <div>
+          <h3>Cada time no seu espaço</h3>
+          <p>Cada time tem o seu próprio banco de dados. Um time nunca vê os clientes de
+            outro.</p>
+        </div>
+        <div>
+          <h3>Sem senha para vazar</h3>
+          <p>A entrada é só por passkey e só por convite. Desativou alguém? As sessões dessa
+            pessoa acabam na hora.</p>
+        </div>
+        <div>
+          <h3>Os dados são do seu time</h3>
+          <p>Os administradores exportam tudo quando quiserem. Os arquivos já ficam no OneDrive
+            de vocês.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="k">Planos <span class="draft-tag">Proposta: preços em revisão</span></div>
+        <h2>Preço por time, não por pessoa.</h2>
+        <p>O plano só limita quantas pessoas e quantos clientes ativos o time tem. Todos os
+          recursos estão em todos os planos.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Grátis</h3>
+          <p class="for">Para experimentar com um cliente.</p>
+          <div class="price">R$ 0</div>
+          <div class="yearly">para sempre</div>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg>Até 2 pessoas</li>
+            <li><svg class="i"><use href="#i-check"/></svg>1 cliente</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Todos os recursos</li>
+          </ul>
+          <a class="btn" href="#beta">Entrar no beta</a>
+        </div>
+        <div class="plan hl">
+          <span class="badge">14 dias grátis</span>
+          <h3>Equipe</h3>
+          <p class="for">Para o time pequeno que atende vários clientes.</p>
+          <div class="price">R$ 99 <small>/mês</small></div>
+          <div class="yearly">ou R$ 990 por ano (2 meses grátis)</div>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg>Até 5 pessoas</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Clientes ilimitados</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Todos os recursos</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Teste de 14 dias sem cartão</li>
+          </ul>
+          <a class="btn primary" href="#beta">Entrar no beta</a>
+        </div>
+        <div class="plan">
+          <h3>Agência</h3>
+          <p class="for">Para agências com mais gente no time.</p>
+          <div class="price">R$ 249 <small>/mês</small></div>
+          <div class="yearly">ou R$ 2.490 por ano (2 meses grátis)</div>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg>Até 15 pessoas</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Clientes ilimitados</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Todos os recursos</li>
+          </ul>
+          <a class="btn" href="#beta">Entrar no beta</a>
+        </div>
+      </div>
+      <div class="plans-note">
+        <p><b>Teste grátis.</b> Todo time novo ganha 14 dias do plano Equipe, sem informar
+          cartão. Se não assinar, o time passa para o Grátis.</p>
+        <p><b>Nada some.</b> Acima do limite do plano, o que já existe fica só para leitura.
+          Nenhum pedido ou cliente é apagado por causa do plano.</p>
+        <p><b>Pagamento.</b> Cartão ou Pix Automático, pela Paddle, a revendedora oficial do
+          Pauta, que emite o recibo. Cancele quando quiser.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="beta" id="beta">
+    <div class="wrap">
+      <div class="beta-box">
+        <div>
+          <h2>O Pauta está em beta fechado.</h2>
+          <p>Estamos abrindo aos poucos para times pequenos de marketing e agências. Conte como
+            o seu time trabalha hoje e a gente cria o espaço de vocês.</p>
+          <ul>
+            <li>Um convite para o primeiro administrador do time</li>
+            <li>Ajuda para trazer os clientes da planilha</li>
+            <li>Conversa direta com quem faz o Pauta</li>
+          </ul>
+        </div>
+        <div class="ctas" id="contato">
+          <!-- CONTACT: the owner picks the channel before launch -->
+          <a class="btn big" href="#beta" data-contact>Quero entrar no beta</a>
+          <a class="btn big ghost" href="https://app.pauta.cc">Já tenho convite: entrar</a>
+          <p class="fine">Sem cadastro, sem cartão. A gente responde em até um dia útil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="perguntas">
+    <div class="wrap">
+      <div class="sec-head"><div class="k">Perguntas</div><h2>Perguntas frequentes</h2></div>
+      <div class="faq">
+        <details>
+          <summary>Preciso criar uma senha?</summary>
+          <p>Não. O Pauta usa passkeys: você entra com Face ID, digital ou o PIN do aparelho,
+            como para desbloquear o celular. Não existe senha para esquecer, anotar ou vazar.</p>
+        </details>
+        <details>
+          <summary>Funciona no celular?</summary>
+          <p>Sim. O Pauta abre no navegador do celular e do computador, e dá para instalar na
+            tela inicial como um app. Não precisa baixar nada da loja.</p>
+        </details>
+        <details>
+          <summary>Onde ficam os arquivos dos pedidos?</summary>
+          <p>No OneDrive do próprio time. Um administrador conecta o OneDrive uma vez; depois,
+            cada imagem ou vídeo enviado num pedido vai para lá, e você pode gerar um link só de
+            visualização para mandar ao cliente.</p>
+        </details>
+        <details>
+          <summary>Meus clientes têm acesso ao Pauta?</summary>
+          <p>Não. O Pauta é a ferramenta interna do time. Para o cliente, você manda só o que
+            quiser, como o link de visualização de um arquivo.</p>
+        </details>
+        <details>
+          <summary>Outro time consegue ver os meus clientes?</summary>
+          <p>Não. Cada time tem o seu próprio banco de dados, separado dos outros, e só entra
+            quem foi convidado por um administrador do time.</p>
+        </details>
+        <details>
+          <summary>Por que preço por time e não por pessoa?</summary>
+          <p>Porque time pequeno muda: entra estagiário, sai freelancer. Com preço por time você
+            sabe quanto vai pagar no mês, e o plano só olha para o número de pessoas e de
+            clientes ativos.</p>
+        </details>
+        <details>
+          <summary>Quem está por trás do Pauta?</summary>
+          <p>O Pauta é feito e vendido pela Du7 Technology Services, uma empresa de software
+            registrada na Holanda (KvK 91476003). Os pagamentos passam pela Paddle, que é a
+            revendedora oficial e cuida da cobrança e do recibo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="/" class="brand"><span class="logo" aria-hidden="true"></span>pauta</a>
+      <p>Pauta é um produto da Du7 Technology Services · KvK 91476003 · Países Baixos.</p>
+      <p>© 2026 Du7 Technology Services.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="https://app.pauta.cc">Entrar</a>
+      <a href="/#planos">Planos</a>
+      <a href="/termos.html">Termos de uso</a>
+      <a href="/privacidade.html">Privacidade</a>
+      <a href="/reembolso.html">Reembolso</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
