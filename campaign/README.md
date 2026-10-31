@@ -4,8 +4,9 @@ Copy in Brazilian Portuguese for the beta launch. The images are made by `make i
 (`tools/render_images.py`). This folder is in the repo but **not published**: only `site/` goes
 to GitHub Pages.
 
-**Before posting, fill in `[CONTATO]`** (the channel the owner picks for beta requests) and check
-that prices aren't mentioned anywhere. They're still proposed, so the campaign leaves them out.
+Beta contact: famulus's WhatsApp, **+1 555 474 7185** (lead intake: an automatic reply, and the message is forwarded to the owner).
+Link with a pre-filled message: https://wa.me/15554747185?text=Oi%21%20Quero%20entrar%20no%20beta%20do%20Pauta.
+Check that prices aren't mentioned anywhere. They're still proposed, so the campaign leaves them out.
 
 | File | Size | For |
 |---|---|---|
@@ -31,7 +32,7 @@ that prices aren't mentioned anywhere. They're still proposed, so the campaign l
 > dia.
 >
 > Estamos em **beta fechado** para times pequenos de marketing e agências. Quer entrar?
-> Chama a gente: [CONTATO] ou o link na bio.
+> Chama a gente: wa.me/15554747185 ou o link na bio.
 >
 > #marketingdigital #agenciademarketing #socialmedia #gestaodeprojetos #trafegopago
 > #produtividade #gestordetrafego

@@ -44,5 +44,5 @@ Every new page must start with it too; `make check` tests every page, directly a
 
 - Prices on the page are marked as a proposal; the owner confirms them (decision 6).
 - Termos, Privacidade and Reembolso are drafts for legal review; the highlighted bits are open.
-- The beta contact channel is a placeholder (`data-contact` in `index.html`, `[CONTATO]` in the
-  campaign, "canal de contato a definir" in the legal pages).
+- The beta contact is famulus's WhatsApp number (+1 555 474 7185, lead intake on): an automatic
+  reply, and the message is forwarded to the owner. Paddle may also want an email address.
