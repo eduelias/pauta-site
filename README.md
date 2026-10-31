@@ -18,6 +18,7 @@ make check    # needs uv; Playwright's Chromium is installed once with
               # uv run --no-project --with playwright==1.64.1 playwright install chromium
 make shots    # check + desktop/mobile screenshots in shots/
 make images   # og.png and campaign/*.png
+make live     # the live hosts: redirects, the site, old app links
 ```
 
 ## Hosting
