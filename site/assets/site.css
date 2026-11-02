@@ -302,3 +302,24 @@ footer nav a { color: var(--ink-2); }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* ---- content pages (recursos/, comparar/) ------------------------------------------- */
+.page { padding: 40px 0 80px; }
+.page .wrap { max-width: 760px; }
+.crumbs { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.crumbs a { color: var(--muted); }
+.crumbs span { color: var(--ink-2); }
+.page h1 { font-size: clamp(32px, 4vw, 46px); font-weight: 800; letter-spacing: -.035em;
+  margin-top: 10px; }
+.page h2 { font-size: 22px; margin: 40px 0 10px; }
+.page p, .page li { color: var(--ink-2); }
+.page p + p { margin-top: 12px; }
+.page ul { padding-left: 22px; }
+.page li { margin: 6px 0; }
+.page li b { color: var(--ink); }
+.page .flow { margin-top: 18px; }
+.page-cta { margin-top: 48px; padding: 28px; border-radius: var(--radius); background: var(--surface);
+  border: 1px solid var(--line); box-shadow: var(--shadow); }
+.page-cta h2 { margin-top: 0; }
+.page-cta .ctas { margin-top: 18px; }
+.feat .more { display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 600; }

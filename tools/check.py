@@ -3,6 +3,7 @@
 - Old app links: every page, reached directly or through a 301 (like pauta.cc -> www), sends
   `#/...` fragments on to https://app.pauta.cc/#/... and doesn't forward ordinary anchors.
 - No console errors, and every local link and asset answers 200.
+- Pages are found under site/ (every *.html but 404.html), so new pages are checked too.
 - `--shots DIR`: full-page desktop (1440 wide) and mobile (390 wide) screenshots, light and dark.
 
 Run: make check   (or: uv run --no-project --with playwright==1.64.1 python tools/check.py)
@@ -20,7 +21,11 @@ from urllib.parse import urljoin, urlparse
 from playwright.sync_api import sync_playwright
 
 SITE = Path(__file__).resolve().parent.parent / "site"
-PAGES = ["/", "/termos.html", "/privacidade.html", "/reembolso.html", "/nao-existe"]
+PAGES = sorted(
+    "/" + p.relative_to(SITE).as_posix().removesuffix("index.html")
+    for p in SITE.rglob("*.html")
+    if p.name != "404.html"
+) + ["/nao-existe"]  # every published page, then an unknown path
 APP = "https://app.pauta.cc/"
 
 
