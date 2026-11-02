@@ -9,9 +9,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0e0e12" media="(prefers-color-scheme: dark)">
-  <title>Pauta · a fila de pedidos do seu time de marketing</title>
-  <meta name="description" content="Pauta organiza os pedidos de cada cliente entre quem atende e quem executa: briefing, prazo, quadro, ficha do cliente, financeiro e arquivos no OneDrive. Entrada com Face ID, sem senha.">
+  <title>Pauta · gestão de demandas para agências de marketing</title>
+  <meta name="description" content="Gestão de demandas para agências de marketing: pedidos por cliente com briefing e prazo, quadro, financeiro e arquivos no OneDrive. Com Face ID, sem senha.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.pauta.cc/">
+  <!-- Search Console and Bing Webmaster: the owner creates the properties and pastes the
+       verification tags here (README, "Search Console e Bing"), or adds the DNS TXT records
+       in du7/dns-zone instead. -->
+  <!-- <meta name="google-site-verification" content="PASTE-FROM-SEARCH-CONSOLE"> -->
+  <!-- <meta name="msvalidate.01" content="PASTE-FROM-BING-WEBMASTER"> -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.pauta.cc/#org",
+        "name": "Pauta",
+        "legalName": "Du7 Technology Services",
+        "url": "https://www.pauta.cc/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.pauta.cc/icon-512.png",
+          "width": 512,
+          "height": 512
+        },
+        "email": "info@pauta.cc",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@pauta.cc",
+          "availableLanguage": "pt-BR"
+        },
+        "address": { "@type": "PostalAddress", "addressCountry": "NL" },
+        "identifier": { "@type": "PropertyValue", "propertyID": "KvK", "value": "91476003" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://www.pauta.cc/#app",
+        "name": "Pauta",
+        "url": "https://www.pauta.cc/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "pt-BR",
+        "description": "Gestão de demandas para agências e times pequenos de marketing: os pedidos de cada cliente com briefing, verba, prazo e histórico, num quadro que todo mundo vê, com ficha do cliente, financeiro e arquivos no OneDrive do time.",
+        "image": "https://www.pauta.cc/og.png",
+        "featureList": [
+          "Pedidos por cliente com briefing, verba, prazo, responsável e prioridade",
+          "Quadro e painel: A fazer, Em andamento, Aguardando, Concluído",
+          "Ficha do cliente com o histórico de pedidos",
+          "Financeiro: valor mensal por cliente, quem está em dia ou em atraso",
+          "Arquivos no OneDrive do time, com link só de visualização para o cliente",
+          "Entrada com passkey (Face ID, digital ou PIN), sem senha",
+          "Prévia dos pedidos no WhatsApp",
+          "Linha do tempo de cada pedido"
+        ],
+        "isAccessibleForFree": true,
+        "publisher": { "@id": "https://www.pauta.cc/#org" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Grátis",
+            "price": "0",
+            "priceCurrency": "BRL",
+            "url": "https://www.pauta.cc/#planos",
+            "description": "Para sempre. Até 2 pessoas e 1 cliente, todos os recursos."
+          },
+          {
+            "@type": "Offer",
+            "name": "Equipe",
+            "price": "99.00",
+            "priceCurrency": "BRL",
+            "url": "https://www.pauta.cc/#planos",
+            "description": "Por mês, ou R$ 990 por ano. Até 5 pessoas, clientes ilimitados, 14 dias grátis sem cartão."
+          },
+          {
+            "@type": "Offer",
+            "name": "Agência",
+            "price": "249.00",
+            "priceCurrency": "BRL",
+            "url": "https://www.pauta.cc/#planos",
+            "description": "Por mês, ou R$ 2.490 por ano. Até 15 pessoas, clientes ilimitados."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- seo:faq -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Preciso criar uma senha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O Pauta usa passkeys: você entra com Face ID, digital ou o PIN do aparelho, como para desbloquear o celular. Não existe senha para esquecer, anotar ou vazar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funciona no celular?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. O Pauta abre no navegador do celular e do computador, e dá para instalar na tela inicial como um app. Não precisa baixar nada da loja."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde ficam os arquivos dos pedidos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No OneDrive do próprio time. Um administrador conecta o OneDrive uma vez; depois, cada imagem ou vídeo enviado num pedido vai para lá, e você pode gerar um link só de visualização para mandar ao cliente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Meus clientes têm acesso ao Pauta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. O Pauta é a ferramenta interna do time. Para o cliente, você manda só o que quiser, como o link de visualização de um arquivo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Outro time consegue ver os meus clientes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Cada time tem o seu próprio banco de dados, separado dos outros, e só entra quem foi convidado por um administrador do time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Por que preço por time e não por pessoa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Porque time pequeno muda: entra estagiário, sai freelancer. Com preço por time você sabe quanto vai pagar no mês, e o plano só olha para o número de pessoas e de clientes ativos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quem está por trás do Pauta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O Pauta é feito e vendido pela Du7 Technology Services, uma empresa de software registrada na Holanda (KvK 91476003). Os pagamentos passam pela Paddle, que é a revendedora oficial e cuida da cobrança e do recibo."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- /seo:faq -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Pauta">
   <meta property="og:locale" content="pt_BR">
@@ -48,9 +198,9 @@
   <div class="wrap">
     <a href="/" class="brand"><span class="logo" aria-hidden="true"></span>pauta</a>
     <nav aria-label="Principal">
-      <a href="#recursos">Recursos</a>
-      <a href="#planos">Planos</a>
-      <a href="#beta">Beta</a>
+      <a href="/#recursos">Recursos</a>
+      <a href="/#planos">Planos</a>
+      <a href="/#beta">Beta</a>
       <a class="btn small" href="https://app.pauta.cc">Entrar</a>
     </nav>
   </div>
@@ -61,7 +211,7 @@
     <div class="wrap">
       <div>
         <span class="eyebrow">Beta fechado · para times de marketing e agências</span>
-        <h1>Os pedidos do time, <span class="g">num lugar só.</span></h1>
+        <h1>Gestão de demandas da sua agência, <span class="g">num lugar só.</span></h1>
         <p class="lead">O Pauta é a fila de pedidos entre quem fala com o cliente e quem roda a
           campanha. Cada pedido com briefing, prazo e histórico, organizado por cliente. Sem
           planilha, sem caçar mensagem perdida no WhatsApp.</p>
@@ -162,49 +312,50 @@
       </div>
       <div class="features">
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-list"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-list"/></svg></div>
           <h3>Pedidos por cliente</h3>
           <p>Briefing, verba, prazo, responsável e prioridade. Filtros e listas salvas para
             achar tudo rápido.</p>
+          <a class="more" href="/recursos/pedidos/">Como funcionam os pedidos →</a>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-board"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-board"/></svg></div>
           <h3>Quadro e painel</h3>
           <p>Veja cada etapa de relance, e no painel o que vence hoje, o que está atrasado e o
             que espera retorno.</p>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-client"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-client"/></svg></div>
           <h3>Ficha do cliente</h3>
           <p>Contato, segmento, Instagram, conta de anúncios e o histórico de todos os pedidos
             daquele cliente.</p>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-money"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-money"/></svg></div>
           <h3>Financeiro</h3>
           <p>Valor mensal de cada cliente, quem está em dia, em atraso ou vencendo na semana, e
             quanto entrou no mês.</p>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-folder"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-folder"/></svg></div>
           <h3>Arquivos no seu OneDrive</h3>
           <p>Imagens e vídeos ficam no OneDrive do time, presos ao pedido. Para o cliente, um
             link só de visualização.</p>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-face"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-face"/></svg></div>
           <h3>Entrar com Face ID</h3>
           <p>Sem senha: entra com Face ID, digital ou o PIN do aparelho (passkey). Nada para
             esquecer ou vazar.</p>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-chat"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></div>
           <h3>Feito para o WhatsApp</h3>
           <p>Mande o link de um pedido no grupo: aparece a prévia e abre direto no pedido
             certo.</p>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-clock"/></svg></div>
+          <div class="ic"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></div>
           <h3>Linha do tempo</h3>
           <p>Cada pedido guarda quem mudou o quê e quando, com comentários. Histórico que não
             se perde.</p>
@@ -250,9 +401,9 @@
           <div class="price">R$ 0</div>
           <div class="yearly">para sempre</div>
           <ul>
-            <li><svg class="i"><use href="#i-check"/></svg>Até 2 pessoas</li>
-            <li><svg class="i"><use href="#i-check"/></svg>1 cliente</li>
-            <li><svg class="i"><use href="#i-check"/></svg>Todos os recursos</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Até 2 pessoas</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>1 cliente</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Todos os recursos</li>
           </ul>
           <a class="btn" href="#beta">Entrar no beta</a>
         </div>
@@ -263,10 +414,10 @@
           <div class="price">R$ 99 <small>/mês</small></div>
           <div class="yearly">ou R$ 990 por ano (2 meses grátis)</div>
           <ul>
-            <li><svg class="i"><use href="#i-check"/></svg>Até 5 pessoas</li>
-            <li><svg class="i"><use href="#i-check"/></svg>Clientes ilimitados</li>
-            <li><svg class="i"><use href="#i-check"/></svg>Todos os recursos</li>
-            <li><svg class="i"><use href="#i-check"/></svg>Teste de 14 dias sem cartão</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Até 5 pessoas</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Clientes ilimitados</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Todos os recursos</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Teste de 14 dias sem cartão</li>
           </ul>
           <a class="btn primary" href="#beta">Entrar no beta</a>
         </div>
@@ -276,9 +427,9 @@
           <div class="price">R$ 249 <small>/mês</small></div>
           <div class="yearly">ou R$ 2.490 por ano (2 meses grátis)</div>
           <ul>
-            <li><svg class="i"><use href="#i-check"/></svg>Até 15 pessoas</li>
-            <li><svg class="i"><use href="#i-check"/></svg>Clientes ilimitados</li>
-            <li><svg class="i"><use href="#i-check"/></svg>Todos os recursos</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Até 15 pessoas</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Clientes ilimitados</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Todos os recursos</li>
           </ul>
           <a class="btn" href="#beta">Entrar no beta</a>
         </div>

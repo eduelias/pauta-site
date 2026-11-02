@@ -1,0 +1,19 @@
+# On pull requests: the SEO sync checks (no browser), so a page change that forgets the FAQ
+# JSON-LD, the sitemap or the shared header/footer fails before it is merged.
+name: check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0 # sitemap lastmod comes from git history
+      - run: python3 tools/seo.py check
