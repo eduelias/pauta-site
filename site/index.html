@@ -10,14 +10,14 @@
   <meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0e0e12" media="(prefers-color-scheme: dark)">
   <title>Pauta · a fila de pedidos do seu time de marketing</title>
-  <meta name="description" content="Pauta organiza os pedidos de cada cliente entre quem atende e quem executa: briefing, prazo, quadro, ficha do cliente, financeiro e arquivos no OneDrive. Entrada com Face ID, sem senha.">
+  <meta name="description" content="Pauta é a fila de pedidos de quem roda Meta Ads para clientes: briefing, prazo e quadro, com as campanhas, o saldo e o financeiro de cada cliente. Sem senha.">
   <link rel="canonical" href="https://www.pauta.cc/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Pauta">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://www.pauta.cc/">
   <meta property="og:title" content="Pauta · a fila de pedidos do seu time de marketing">
-  <meta property="og:description" content="Pedidos por cliente, quadro, financeiro e arquivos num lugar só. Para times pequenos de marketing e agências. Beta aberto a convite.">
+  <meta property="og:description" content="Pedidos, campanhas da Meta e pagamentos de cada cliente num lugar só. Para times pequenos que rodam anúncios para clientes. Beta a convite.">
   <meta property="og:image" content="https://www.pauta.cc/og.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
@@ -41,6 +41,7 @@
   <symbol id="i-face" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 9v1M15 9v1M12 9v4h-1M9 16c1.7 1.3 4.3 1.3 6 0"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-5A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h3"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
 </svg>
 
@@ -60,18 +61,20 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow">Beta fechado · para times de marketing e agências</span>
-        <h1>Os pedidos do time, <span class="g">num lugar só.</span></h1>
-        <p class="lead">O Pauta é a fila de pedidos entre quem fala com o cliente e quem roda a
-          campanha. Cada pedido com briefing, prazo e histórico, organizado por cliente. Sem
-          planilha, sem caçar mensagem perdida no WhatsApp.</p>
+        <span class="eyebrow">Beta fechado, para quem roda Meta Ads para clientes</span>
+        <h1>Pedidos e campanhas de cada cliente, <span class="g">num lugar só.</span></h1>
+        <p class="lead">Pauta é a fila de pedidos entre quem fala com o cliente e quem roda a
+          campanha. Cada pedido tem briefing, verba e prazo. Cada cliente tem as campanhas da
+          Meta, o saldo da conta e o pagamento do mês no mesmo lugar. Sem planilha, sem caçar
+          mensagem perdida no WhatsApp.</p>
         <div class="ctas">
           <a class="btn primary big" href="#beta">Quero entrar no beta</a>
-          <a class="btn big" href="#planos">Ver os planos</a>
+          <a class="btn big" href="#campanhas">Ver as campanhas</a>
         </div>
-        <p class="note">Já usa o Pauta? <a href="https://app.pauta.cc">Entrar em app.pauta.cc →</a></p>
+        <p class="note">Já tem convite? <a href="https://app.pauta.cc">Entrar em app.pauta.cc</a></p>
       </div>
 
+      <div class="stage">
       <div class="board" role="img" aria-label="Um quadro de pedidos com as colunas A fazer, Em andamento e Aguardando">
         <div class="col">
           <h4>A fazer <b>3</b></h4>
@@ -119,16 +122,58 @@
           </div>
         </div>
       </div>
+        <div class="phone" aria-hidden="true"><img src="/assets/tela-campanhas.webp" alt="" width="600" height="1120"></div>
+      </div>
     </div>
   </section>
 
-  <section class="alt" id="como-funciona">
+  <section class="alt" id="campanhas">
+    <div class="wrap split">
+      <div class="phones">
+        <div class="phone"><img src="/assets/tela-campanhas.webp" width="600" height="1120" loading="lazy"
+          alt="A tela Campanhas no celular: um cliente com o botão Visto hoje, o saldo da conta e os números das campanhas."></div>
+        <div class="phone"><img src="/assets/tela-relatorio.webp" width="600" height="1120" loading="lazy"
+          alt="Um relatório de campanha com resultados, custo por resultado e valor gasto, e os botões Copiar imagem, Copiar link e Abrir conversa."></div>
+      </div>
+      <div>
+        <div class="sec-head">
+          <h2>Já olhou as campanhas hoje?</h2>
+          <p>Quem cuida de tráfego confere as contas todo dia. Em Campanhas, os números da Meta
+            aparecem por cliente, com os nomes que o Gerenciador de Anúncios usa.</p>
+        </div>
+        <dl class="points">
+          <div>
+            <dt>Visto hoje</dt>
+            <dd>Um toque por cliente, ou todos de uma vez. No alto fica a contagem do dia, e quem
+              ainda falta ver aparece em cima.</dd>
+          </div>
+          <div>
+            <dt>Saldo acabando</dt>
+            <dd>Na Visão geral, quem precisa de atenção aparece no topo: saldo acabando,
+              campanha sem entrega, custo subindo.</dd>
+          </div>
+          <div>
+            <dt>Avisar o cliente</dt>
+            <dd>Um toque abre o WhatsApp do cliente com o aviso de saldo ou o resumo do período
+              já escrito. Você lê, ajusta e envia.</dd>
+          </div>
+          <div>
+            <dt>Relatório pronto para o WhatsApp</dt>
+            <dd>Escolha as métricas e gere um cartão com cada número e uma frase curta dizendo o
+              que ele mede. O link abre em qualquer navegador, sem conta, e vale por 5 dias.</dd>
+          </div>
+        </dl>
+        <p class="readonly">Pauta só lê os dados da Meta. Não altera nada nas suas campanhas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
     <div class="wrap">
       <div class="sec-head">
-        <div class="k">Como funciona</div>
         <h2>Quem atende pede. Quem executa entrega. Todo mundo vê.</h2>
         <p>Feito com um time de marketing de verdade, que trocou a planilha "Controle de
-          Clientes e Campanhas" pelo Pauta e usa todo dia.</p>
+          Clientes e Campanhas" por Pauta e usa todo dia.</p>
       </div>
       <div class="steps">
         <div class="step">
@@ -154,10 +199,42 @@
     </div>
   </section>
 
+  <section class="alt" id="financeiro">
+    <div class="wrap split rev">
+      <div>
+        <div class="sec-head">
+          <h2>Quem pagou. Quem atrasou. Quem vence esta semana.</h2>
+          <p>O Financeiro guarda o valor mensal de cada cliente e mostra quanto entrou no mês, no
+            mesmo lugar dos pedidos e das campanhas.</p>
+        </div>
+        <dl class="points">
+          <div>
+            <dt><span class="pill p-done">Em dia</span></dt>
+            <dd>Quem já pagou o mês.</dd>
+          </div>
+          <div>
+            <dt><span class="pill p-waiting">Vence esta semana</span></dt>
+            <dd>Para lembrar o cliente antes.</dd>
+          </div>
+          <div>
+            <dt><span class="pill p-late">Em atraso</span></dt>
+            <dd>Com o valor e há quantos dias venceu.</dd>
+          </div>
+        </dl>
+        <p class="readonly">O pagamento é registrado direto no painel e nunca é apagado, só
+          anulado: o histórico fica inteiro.</p>
+      </div>
+      <div class="phones one">
+        <div class="phone"><img src="/assets/tela-financeiro.webp" width="600" height="1120" loading="lazy"
+          alt="A tela Financeiro no celular: o recebido no mês, um cliente em atraso, um que vence esta semana e um em dia."></div>
+      </div>
+    </div>
+    <p class="wrap demo-note">As telas mostram dados de demonstração, com clientes fictícios.</p>
+  </section>
+
   <section id="recursos">
     <div class="wrap">
       <div class="sec-head">
-        <div class="k">Recursos</div>
         <h2>O que um time pequeno de marketing precisa. E só isso.</h2>
       </div>
       <div class="features">
@@ -180,10 +257,10 @@
             daquele cliente.</p>
         </div>
         <div class="feat">
-          <div class="ic"><svg class="i"><use href="#i-money"/></svg></div>
-          <h3>Financeiro</h3>
-          <p>Valor mensal de cada cliente, quem está em dia, em atraso ou vencendo na semana, e
-            quanto entrou no mês.</p>
+          <div class="ic"><svg class="i"><use href="#i-phone"/></svg></div>
+          <h3>No celular</h3>
+          <p>Abre no navegador e fica na tela inicial como um app. Não precisa baixar nada da
+            loja.</p>
         </div>
         <div class="feat">
           <div class="ic"><svg class="i"><use href="#i-folder"/></svg></div>
@@ -217,6 +294,11 @@
     <div class="wrap">
       <div class="trust">
         <div>
+          <h3>Só leitura na Meta</h3>
+          <p>Pauta só lê os dados da Meta: os números, o saldo e os nomes das campanhas. Não
+            altera nada nas contas de anúncios.</p>
+        </div>
+        <div>
           <h3>Cada time no seu espaço</h3>
           <p>Cada time tem o seu próprio banco de dados. Um time nunca vê os clientes de
             outro.</p>
@@ -238,7 +320,7 @@
   <section id="planos">
     <div class="wrap">
       <div class="sec-head">
-        <div class="k">Planos <span class="draft-tag">Proposta: preços em revisão</span></div>
+        <div><span class="draft-tag">Proposta: preços em revisão</span></div>
         <h2>Preço por time, não por pessoa.</h2>
         <p>O plano só limita quantas pessoas e quantos clientes ativos o time tem. Todos os
           recursos estão em todos os planos.</p>
@@ -288,8 +370,8 @@
           cartão. Se não assinar, o time passa para o Grátis.</p>
         <p><b>Nada some.</b> Acima do limite do plano, o que já existe fica só para leitura.
           Nenhum pedido ou cliente é apagado por causa do plano.</p>
-        <p><b>Pagamento.</b> Cartão ou Pix Automático, pela Paddle, a revendedora oficial do
-          Pauta, que emite o recibo. Cancele quando quiser.</p>
+        <p><b>Pagamento.</b> Cartão ou Pix Automático, pela Paddle, nossa revendedora oficial,
+          que emite o recibo. Cancele quando quiser.</p>
       </div>
     </div>
   </section>
@@ -298,17 +380,17 @@
     <div class="wrap">
       <div class="beta-box">
         <div>
-          <h2>O Pauta está em beta fechado.</h2>
-          <p>Estamos abrindo aos poucos para times pequenos de marketing e agências. Conte como
-            o seu time trabalha hoje e a gente cria o espaço de vocês.</p>
+          <h2>Pauta está em beta fechado.</h2>
+          <p>Estamos abrindo aos poucos para times pequenos que rodam Meta Ads para clientes, e
+            para agências. Conte como o seu time trabalha hoje e a gente cria o espaço de vocês.</p>
           <ul>
             <li>Um convite para o primeiro administrador do time</li>
             <li>Ajuda para trazer os clientes da planilha</li>
-            <li>Conversa direta com quem faz o Pauta</li>
+            <li>Conversa direta com quem faz o produto</li>
           </ul>
         </div>
         <div class="ctas" id="contato">
-          <a class="btn big" href="https://wa.me/15554747185?text=Oi%21%20Quero%20entrar%20no%20beta%20do%20Pauta.">Chamar no WhatsApp</a>
+          <a class="btn big" href="https://wa.me/15554747185?text=Oi%21%20Quero%20entrar%20no%20beta.">Chamar no WhatsApp</a>
           <a class="btn big ghost" href="https://app.pauta.cc">Já tenho convite: entrar</a>
           <p class="fine">Sem cadastro, sem cartão. Responda às perguntas do assistente e o Eduardo te chama em até um dia útil.</p>
         </div>
@@ -318,16 +400,26 @@
 
   <section class="alt" id="perguntas">
     <div class="wrap">
-      <div class="sec-head"><div class="k">Perguntas</div><h2>Perguntas frequentes</h2></div>
+      <div class="sec-head"><h2>Perguntas frequentes</h2></div>
       <div class="faq">
         <details>
+          <summary>Pauta mexe nas minhas campanhas?</summary>
+          <p>Não. Pauta só lê os dados da Meta e não altera nada nas suas campanhas. Um
+            administrador do time conecta a conta uma vez, em Configurações.</p>
+        </details>
+        <details>
+          <summary>Funciona com Google Ads?</summary>
+          <p>Hoje, Campanhas lê só a Meta (Facebook e Instagram). Pedidos, ficha do cliente e
+            Financeiro servem para qualquer canal.</p>
+        </details>
+        <details>
           <summary>Preciso criar uma senha?</summary>
-          <p>Não. O Pauta usa passkeys: você entra com Face ID, digital ou o PIN do aparelho,
+          <p>Não. Pauta usa passkeys: você entra com Face ID, digital ou o PIN do aparelho,
             como para desbloquear o celular. Não existe senha para esquecer, anotar ou vazar.</p>
         </details>
         <details>
           <summary>Funciona no celular?</summary>
-          <p>Sim. O Pauta abre no navegador do celular e do computador, e dá para instalar na
+          <p>Sim. Pauta abre no navegador do celular e do computador, e dá para instalar na
             tela inicial como um app. Não precisa baixar nada da loja.</p>
         </details>
         <details>
@@ -337,9 +429,9 @@
             visualização para mandar ao cliente.</p>
         </details>
         <details>
-          <summary>Meus clientes têm acesso ao Pauta?</summary>
-          <p>Não. O Pauta é a ferramenta interna do time. Para o cliente, você manda só o que
-            quiser, como o link de visualização de um arquivo.</p>
+          <summary>Meus clientes têm acesso?</summary>
+          <p>Não. Pauta é a ferramenta interna do time. Para o cliente, você manda só o que
+            quiser, como o relatório de uma campanha ou o link de visualização de um arquivo.</p>
         </details>
         <details>
           <summary>Outro time consegue ver os meus clientes?</summary>
@@ -353,8 +445,8 @@
             clientes ativos.</p>
         </details>
         <details>
-          <summary>Quem está por trás do Pauta?</summary>
-          <p>O Pauta é feito e vendido pela Du7 Technology Services, uma empresa de software
+          <summary>Quem está por trás?</summary>
+          <p>Quem faz e vende Pauta é a Du7 Technology Services, uma empresa de software
             registrada na Holanda (KvK 91476003). Os pagamentos passam pela Paddle, que é a
             revendedora oficial e cuida da cobrança e do recibo.</p>
         </details>
